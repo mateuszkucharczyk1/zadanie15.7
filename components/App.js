@@ -61,7 +61,7 @@ class App extends React.Component {
         this.reset();
     };
 
-    Save = () => {
+    clean = () => {
         this.setState({
             listTime: []
         })
@@ -75,7 +75,7 @@ class App extends React.Component {
                     <a href="#" className="button" onClick={this.stop}>Stop</a>
                     <a href="#" className="button" onClick={this.resetTimer}>Reset</a>
                     {this.state.listTime.length > 0 &&
-                        < a href="#" className="button" onClick={this.clean}>Save</a>
+                        < a href="#" className="button" onClick={this.clean}>Clean</a>
                     }
                 </nav>
                 <Stopwatch time={format(this.state.times)}/>
